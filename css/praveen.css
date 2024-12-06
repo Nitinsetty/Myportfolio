@@ -1,0 +1,62 @@
+.projects {
+    margin: 20px;
+  }
+
+  .category-menu {
+    display: flex;
+    gap: 45px;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .image-row {
+    display: flex;
+    gap: 1%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .col-sm-3 {
+    flex: 1 1 30%; /* Each image takes up 30% of the row's width */
+    max-width: 300px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Responsive Styles using Media Queries */
+  @media (max-width: 768px) {
+    .category-menu {
+      flex-direction: column; /* Stack the menu items vertically on smaller screens */
+      align-items: center;
+    }
+
+    .image-row {
+      flex-wrap: wrap; /* Allow wrapping of items in the row */
+    }
+
+    .col-sm-3 {
+      flex: 1 1 45%; /* On tablets, images will take up 45% of the row */
+      max-width: 45%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .category-menu {
+      flex-direction: column; /* Stack the menu vertically for mobile */
+      gap: 10px; /* Reduce the gap between items */
+    }
+
+    .image-row {
+      flex-direction: column; /* Stack images vertically */
+    }
+
+    .col-sm-3 {
+      flex: 1 1 100%; /* On mobile, each image takes up the full width of the row */
+      max-width: 100%;
+      margin-bottom: 10px; /* Add some margin between images */
+    }
+  }
