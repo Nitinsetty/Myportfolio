@@ -856,3 +856,116 @@ textarea {
   justify-content: center;
   text-align: center;
 }
+
+/* source code and preview */
+.projects {
+  padding: 20px;
+}
+
+.category-menu {
+  display: flex;
+  gap: 45px;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.category-menu li h3 {
+  margin: 0;
+  cursor: pointer;
+}
+
+.image-row {
+  display: flex;
+  gap: 80px; /* Space between images in a row */
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  position: relative;
+  width: 300px;
+  height: 350px; /* Adjusted height to accommodate title */
+  margin: 10px; /* Space around the images */
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover .project-image {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  transition: opacity 0.3s ease;
+  flex-direction: column;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+/* CSS for the Preview and Source Code Buttons */
+.overlay button {
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;  /* Rounded corners */
+}
+
+.overlay button:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: scale(1.05);  /* Button grow effect on hover */
+}
+
+.preview-btn {
+  /* Additional specific styling for Preview button */
+  background-color: #28a745;
+}
+
+.preview-btn:hover {
+  background-color: #218838;
+}
+
+.source-code-btn {
+  /* Additional specific styling for Source Code button */
+  background-color: #ffc107;
+}
+
+.source-code-btn:hover {
+  background-color: #e0a800;
+}
+
+/* Title styling */
+.image-title {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  margin: 0;
+  font-weight: bold;
+}
